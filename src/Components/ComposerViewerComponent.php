@@ -21,23 +21,8 @@ final class ComposerViewerComponent extends MoonShineComponent
 
     protected function viewData(): array
     {
-        $packages = $this->getComposerPackages();
-
-        /**
-         * "name" => "2captcha/2captcha"
-         * "direct-dependency" => true
-         * "homepage" => null
-         * "source" => "https://github.com/2captcha/2captcha-php/tree/v1.1.1"
-         * "version" => "v1.1.1"
-         * "latest" => "v1.1.1"
-         * "latest-status" => "up-to-date"
-         * "description" => "PHP package for easy integration with 2captcha API"
-         * "abandoned" => false
-         * "label" => "label-success"
-         */
-
         return [
-            'packages' => $packages
+            'packages' => $this->getComposerPackages()
         ];
     }
 

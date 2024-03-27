@@ -2,10 +2,10 @@
     <x-moonshine::table>
         <x-slot:thead>
             <th>#</th>
-            <th>{{ __('moonshine::composer-viewer.package_name') }}</th>
-            <th>{{ __('moonshine::composer-viewer.current_version') }}</th>
-            <th>{{ __('moonshine::composer-viewer.latest_version') }}</th>
-            <th>{{ __('moonshine::composer-viewer.latest_status') }}</th>
+            <th>{{ __('moonshine-composer-viewer::composer-viewer.package_name') }}</th>
+            <th>{{ __('moonshine-composer-viewer::composer-viewer.current_version') }}</th>
+            <th>{{ __('moonshine-composer-viewer::composer-viewer.latest_version') }}</th>
+            <th>{{ __('moonshine-composer-viewer::composer-viewer.latest_status') }}</th>
             <th></th>
         </x-slot:thead>
         <x-slot:tbody>
