@@ -26,7 +26,7 @@
     "extra": {
         "laravel": {
             "providers": [
-              "ComposerViewerServiceProvider"
+              "MoonShine\\ComposerViewer\\ComposerViewerServiceProvider"
             ]
         }
     }
