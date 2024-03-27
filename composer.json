@@ -1,0 +1,33 @@
+{
+    "name": "yurizoom/moonshine-composer-viewer",
+    "type": "library",
+    "description": "Composer viewer for moonshine",
+    "keywords": ["composer", "viewer", "moonshine"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "yurizoom",
+            "homepage": "https://github.com/yurizoom",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "moonshine/moonshine": "^2.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "MoonShine\\ComposerViewer\\": "src/"
+        }
+    },
+    "conflict": {
+        "moonshine/moonshine": "<2.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+              "ComposerViewerServiceProvider"
+            ]
+        }
+    }
+}
