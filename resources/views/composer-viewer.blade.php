@@ -75,7 +75,6 @@
                     .then(data => {
                         this.loadedNewData = true;
                         this.packages = data.packages;
-                        console.log(this.packages);
                     })
                     .finally(() => {
                         this.loading = false;
