@@ -29,6 +29,27 @@ $ composer require yurizoom/moonshine-composer-viewer -vvv
 ]
 ```
 
+### Добавление в меню
+
+Для того чтобы добавить меню в другое место, вставьте следующий код в app/Providers/MoonShineServiceProvider.php:
+```php
+use MoonShine\ComposerViewer\Pages\ComposerViewerPage;
+
+protected function menu(): array
+    {
+        return [
+            ...
+            
+            MenuItem::make(
+                static fn () => __('Log viewer'),
+                new ComposerViewerPage(),
+            ),
+            
+            ...
+        ];
+    }
+```
+
 ## Лицензия
 
 [The MIT License (MIT)](LICENSE).

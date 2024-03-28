@@ -12,6 +12,7 @@ class ComposerViewerServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'moonshine');
+        $this->loadRoutesFrom(__DIR__.'/../routes/composer_viewer.php');
         $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'moonshine-composer-viewer');
         $this->mergeConfigFrom(__DIR__.'/../config/composer-viewer.php', 'moonshine.composer_viewer');
 
