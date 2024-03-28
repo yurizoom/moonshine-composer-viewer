@@ -41,7 +41,7 @@ protected function menu(): array
             ...
             
             MenuItem::make(
-                static fn () => __('Log viewer'),
+                static fn () => __('Composer viewer'),
                 new ComposerViewerPage(),
             ),
             
