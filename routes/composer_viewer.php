@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use MoonShine\ComposerViewer\Controllers\ComposerViewerController;
+use YuriZoom\MoonShineComposerViewer\Controllers\ComposerViewerController;
 
 Route::group([
     'prefix' => config('moonshine.route.prefix'),

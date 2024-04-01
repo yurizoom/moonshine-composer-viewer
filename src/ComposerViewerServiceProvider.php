@@ -1,17 +1,17 @@
 <?php
 
-namespace MoonShine\ComposerViewer;
+namespace YuriZoom\MoonShineComposerViewer;
 
 use Illuminate\Support\ServiceProvider;
-use MoonShine\ComposerViewer\Pages\ComposerViewerPage;
 use MoonShine\Menu\MenuItem;
 use MoonShine\MoonShine;
+use YuriZoom\MoonShineComposerViewer\Pages\ComposerViewerPage;
 
 class ComposerViewerServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'moonshine');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'moonshine-composer-viewer');
         $this->loadRoutesFrom(__DIR__.'/../routes/composer_viewer.php');
         $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'moonshine-composer-viewer');
         $this->mergeConfigFrom(__DIR__.'/../config/composer-viewer.php', 'moonshine.composer_viewer');

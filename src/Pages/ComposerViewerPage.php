@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace MoonShine\ComposerViewer\Pages;
+namespace YuriZoom\MoonShineComposerViewer\Pages;
 
 use MoonShine\Attributes\Icon;
-use MoonShine\ComposerViewer\Components\ComposerViewerComponent;
 use MoonShine\Pages\Page;
+use YuriZoom\MoonShineComposerViewer\Components\ComposerViewerComponent;
 
 #[Icon('heroicons.outline.cog-8-tooth')]
 class ComposerViewerPage extends Page

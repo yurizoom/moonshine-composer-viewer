@@ -1,6 +1,6 @@
 <?php
 
-namespace MoonShine\ComposerViewer;
+namespace YuriZoom\MoonShineComposerViewer;
 
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Process;
@@ -10,7 +10,7 @@ class ComposerViewer
 {
     const TTL = 300;
 
-    static public function getComposerPackages($cache = false)
+    public static function getComposerPackages($cache = false)
     {
         $cache_key = 'moonshine.composer_viewer.packages.'.auth()->user()->getAuthIdentifier();
 
@@ -49,7 +49,7 @@ class ComposerViewer
         }
     }
 
-    static public function isWin(): bool
+    public static function isWin(): bool
     {
         return Str::of(PHP_OS)->upper()->startsWith('WIN');
     }

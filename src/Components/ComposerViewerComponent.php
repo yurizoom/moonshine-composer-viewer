@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace MoonShine\ComposerViewer\Components;
+namespace YuriZoom\MoonShineComposerViewer\Components;
 
 use MoonShine\Components\MoonShineComponent;
-use MoonShine\ComposerViewer\ComposerViewer;
+use YuriZoom\MoonShineComposerViewer\ComposerViewer;
 
 /**
  * @method static static make()
  */
 final class ComposerViewerComponent extends MoonShineComponent
 {
-    protected string $view = 'moonshine::composer-viewer';
+    protected string $view = 'moonshine-composer-viewer::table';
 
     public function __construct()
     {
