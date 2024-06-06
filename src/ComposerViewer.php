@@ -3,7 +3,6 @@
 namespace YuriZoom\MoonShineComposerViewer;
 
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Str;
 
 class ComposerViewer
@@ -12,20 +11,19 @@ class ComposerViewer
 
     public static function getComposerPackages($cache = false)
     {
-        $cache_key = 'moonshine.composer_viewer.packages.'.auth()->user()->getAuthIdentifier();
+        $cacheKey = 'moonshine.composer_viewer.packages';
+        $returnValue = Cache::get($cacheKey);
 
-        if ($cache) {
-            return Cache::get($cache_key);
+        if ($returnValue) {
+            return $returnValue;
         }
 
         $composer = config('moonshine.composer_viewer.composer');
-        try {
-            $output = Process::path(base_path())
-                ->env(['COMPOSER_HOME' => base_path()])
-                ->run("{$composer} show --latest --format=json")
-                ->output();
 
-            $packages = json_decode($output, true)['installed'];
+        try {
+            exec("cd ".base_path()." && {$composer} show --latest --format=json", $output);
+
+            $packages = json_decode(implode("", $output), true)['installed'];
 
             foreach ($packages as &$package) {
                 switch ($package['latest-status']) {
@@ -41,7 +39,7 @@ class ComposerViewer
                 }
             }
 
-            Cache::set($cache_key, $packages);
+            Cache::set($cacheKey, $packages, self::TTL);
 
             return $packages;
         } catch (\Exception) {
