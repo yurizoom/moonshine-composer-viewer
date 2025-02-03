@@ -31,7 +31,7 @@ $ composer require yurizoom/moonshine-composer-viewer -vvv
 
 ### Добавление в меню
 
-Для того чтобы добавить меню в другое место, вставьте следующий код в app/Providers/MoonShineServiceProvider.php:
+Для того чтобы добавить меню в другое место, вставьте следующий код в app/MoonShine/Layouts/MoonShineLayout.php:
 ```php
 use YuriZoom\MoonShineComposerViewer\Pages\ComposerViewerPage;
 
