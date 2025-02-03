@@ -1,4 +1,4 @@
-<x-moonshine::box xmlns:x-moonshine="http://www.w3.org/1999/html" x-data="data()">
+<x-moonshine::layout.box xmlns:x-moonshine="http://www.w3.org/1999/html" x-data="data">
     <x-moonshine::table>
         <x-slot:thead>
             <th>#</th>
@@ -50,18 +50,19 @@
                     <td x-text="package.version"></td>
                     <td x-text="package.latest"></td>
                     <td>
-                        <span class="badge" x-bind:class="`badge-${package.badge}`" x-text="package['latest-status']"></span>
+                        <span class="badge" x-bind:class="`badge-${package.badge}`"
+                              x-text="package['latest-status']"></span>
                     </td>
                     <td x-text="package.description"></td>
                 </tr>
             </template>
         </x-slot:tbody>
     </x-moonshine::table>
-</x-moonshine::box>
+</x-moonshine::layout.box>
 
 <script>
-    function data() {
-        return {
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('data', () => ({
             loadedNewData: false,
             loading: false,
             packages: [],
@@ -80,6 +81,6 @@
                         this.loading = false;
                     });
             }
-        }
-    }
+        }));
+    });
 </script>

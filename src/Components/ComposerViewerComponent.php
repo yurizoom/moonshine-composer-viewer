@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace YuriZoom\MoonShineComposerViewer\Components;
 
-use MoonShine\Components\MoonShineComponent;
+use MoonShine\UI\Components\MoonShineComponent;
 use YuriZoom\MoonShineComposerViewer\ComposerViewer;
 
 /**
@@ -13,11 +13,6 @@ use YuriZoom\MoonShineComposerViewer\ComposerViewer;
 final class ComposerViewerComponent extends MoonShineComponent
 {
     protected string $view = 'moonshine-composer-viewer::table';
-
-    public function __construct()
-    {
-        //
-    }
 
     protected function viewData(): array
     {

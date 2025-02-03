@@ -4,22 +4,20 @@ declare(strict_types=1);
 
 namespace YuriZoom\MoonShineComposerViewer\Pages;
 
-use MoonShine\Attributes\Icon;
-use MoonShine\Pages\Page;
+use MoonShine\Laravel\Pages\Page;
 use YuriZoom\MoonShineComposerViewer\Components\ComposerViewerComponent;
 
-#[Icon('heroicons.outline.cog-8-tooth')]
 class ComposerViewerPage extends Page
 {
-    public function title(): string
+    public function getTitle(): string
     {
         return __('Composer Viewer');
     }
 
-    public function breadcrumbs(): array
+    public function getBreadcrumbs(): array
     {
         return [
-            '#' => $this->title(),
+            '#' => $this->getTitle(),
         ];
     }
 

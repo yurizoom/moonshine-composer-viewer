@@ -1,4 +1,4 @@
-# Composer Viewer for MoonShine
+# Composer Viewer for MoonShine 3
 
 Веб-интерфейс установленных пакетов в Laravel.
 
@@ -16,7 +16,7 @@ $ composer require yurizoom/moonshine-composer-viewer -vvv
 
 ## Настройки
 
-В файле config/moonshine.php добавьте конфигурации.
+Если необходимо изменить настройки, добавьте в файле config/moonshine.php:
 
 ```php
 [
@@ -41,11 +41,9 @@ protected function menu(): array
             ...
             
             MenuItem::make(
-                static fn () => __('Composer viewer'),
-                new ComposerViewerPage(),
+                __('Composer viewer'),
+                ComposerViewerPage::class,
             ),
-            
-            ...
         ];
     }
 ```

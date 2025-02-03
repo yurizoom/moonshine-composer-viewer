@@ -2,7 +2,7 @@
 
 namespace YuriZoom\MoonShineComposerViewer\Controllers;
 
-use MoonShine\Http\Controllers\MoonShineController;
+use MoonShine\Laravel\Http\Controllers\MoonShineController;
 use YuriZoom\MoonShineComposerViewer\ComposerViewer;
 
 class ComposerViewerController extends MoonShineController
