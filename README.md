@@ -2,6 +2,13 @@
 
 Веб-интерфейс установленных пакетов в Laravel.
 
+### Поддержка версий MoonShine
+
+| MoonShine   | Пакет       |
+|-------------|-------------|
+| 2.0+        | 1.0+        |
+| 3.0+        | 2.0+        |
+
 ## Скриншот
 
 ![wx20170809-165644](https://raw.githubusercontent.com/yurizoom/moonshine-composer-viewer/main/blob/screenshot.jpg)
