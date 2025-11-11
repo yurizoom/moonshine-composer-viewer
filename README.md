@@ -12,7 +12,7 @@
 
 ## Скриншот
 
-![screenshot](https://raw.githubusercontent.com/yurizoom/moonshine-composer-viewer/main/blob/screenshot.jpg)
+![screenshot](https://github.com/yurizoom/moonshine-composer-viewer/blob/main/blob/screenshot.jpg?raw=true)
 
 ## Установка
 
