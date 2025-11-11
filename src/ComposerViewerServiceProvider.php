@@ -24,10 +24,7 @@ class ComposerViewerServiceProvider extends ServiceProvider
 
         if (config('moonshine.composer_viewer.auto_menu')) {
             $menu->add([
-                MenuItem::make(
-                    __('Composer Viewer'),
-                    ComposerViewerPage::class,
-                ),
+                MenuItem::make(ComposerViewerPage::class),
             ]);
         }
     }
