@@ -1,4 +1,4 @@
-# Composer Viewer for MoonShine 3
+# Composer Viewer for MoonShine 4
 
 Веб-интерфейс установленных пакетов в Laravel.
 
